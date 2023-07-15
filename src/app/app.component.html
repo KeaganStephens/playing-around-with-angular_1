@@ -1,0 +1,16 @@
+<h1>Add Block</h1>
+
+<h2>Name of block</h2>
+<br>
+<input type="text" #text>
+<br>
+<h2>Name of block</h2>
+<br>
+<input type="color" #color>
+<hr>
+<button (click)="console(color,text)">console</button>
+<ng-container *ngFor="let i of toRepeat">
+  <div class="block" [style.background-color]="i.color">
+    <p>{{i.text}}</p>
+  </div>
+</ng-container>
